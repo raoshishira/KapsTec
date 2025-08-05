@@ -1,68 +1,3 @@
-# Versatile Landing, Blog & Docs Template for a Simplified Web Presence
-
-![ScrewFast](https://github.com/mearashadowfax/ScrewFast/assets/125820963/cdf299bd-414a-4a2d-baf0-d188bb4709c7)
-
-ScrewFast is an **open-source template** designed for quick and efficient web project setup, blending **minimalism with functionality**. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, ScrewFast provides everything you need. By combining the power of the [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Preline UI](https://preline.co/), this template offers a functional and aesthetically pleasing solution for your web presence.
-
-<p align="left">
-    <a href="https://screwfast.uk" target="_blank">
-      <img src="https://vyclk3sx0z.ufs.sh/f/hv6ttNERWpXu6c2AP0GCBnYt4h3FbsMuKyP5RxQ21HvzIae0" alt="ScrewFast Demo" width="180"/></a>
-  &nbsp;&nbsp;&nbsp;
-    <a href="https://atemplate.com/item/screwfast" target="_blank">
-      <img src="https://atemplate.com/badages-awards.svg" alt="ScrewFast | A template" width="180"/></a>
-</p>
-
-## Table of Contents
-
-* [Why Choose ScrewFast?](#why-choose-screwfast)
-* [What's New](#whats-new)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-  * [Development Commands](#development-commands)
-* [Deployment](#deployment)
-  * [Building Your Site](#building-your-site)
-  * [Deploying to Vercel](#deploying-to-vercel)
-  * [Deploying to Netlify](#deploying-to-netlify)
-* [Project Structure](#project-structure)
-* [Static Assets and Public Resources](#static-assets-and-public-resources)
-* [Customization](#customization)
-  * [Editing Component Variables](#editing-component-variables)
-  * [Props in Component Instances](#props-in-component-instances)
-  * [Customizing Navigation and Footer Links](#customizing-navigation-and-footer-links)
-    * [Navigation Bar Links](#navigation-bar-links)
-    * [Footer Links](#footer-links)
-    * [Social Media Links](#social-media-links)
-* [Integrations and Enhancements](#integrations-and-enhancements)
-  * [Starlight Documentation](#starlight-documentation)
-  * [Lenis for Smooth Scrolling](#lenis-for-smooth-scrolling)
-  * [GSAP Integration](#gsap-integration)
-  * [Hiding Scrollbar](#hiding-scrollbar)
-  * [SEO Configuration](#seo-configuration)
-    * [Using constants.ts](#using-constantsts)
-    * [Applying Metadata in Layouts](#applying-metadata-in-layouts)
-    * [Passing Individual Schema](#passing-individual-schema)
-    * [Extending Metadata for SEO](#extending-metadata-for-seo)
-    * [Structured Data and Rich Snippets](#structured-data-and-rich-snippets)
-    * [Using Astro SEO Integrations](#using-astro-seo-integrations)
-  * [Robots.txt](#robotstxt)
-  * [Markdown/MDX](#markdownmdx)
-    * [Image Integration](#image-integration)
-  * [Astro Integrations](#astro-integrations)
-  * [Flexibility with Integrations](#flexibility-with-integrations)
-* [Tools and Technologies](#tools-and-technologies)
-  * [Preline UI](#preline-ui)
-  * [Tailwind CSS](#tailwind-css)
-  * [Deployment and Security](#deployment-and-security)
-  * [HTML Minification](#html-minification)
-* [Contributing](#contributing)
-* [License](#license)
-
-## Why Choose ScrewFast?
-
-* **Efficient Architecture:** Deploy faster with a template that's simple to set up and navigate.
-* **Optimized for Small Projects:** Perfect for crisp, professional web personas without excess complexity.
-* **Highly Customizable:** Flexibly adapt and style your site using Astro and Tailwind CSS.
-
 ### Features
 
 * **Astro-Powered:** Utilize a modern static-site generation framework.
@@ -108,23 +43,10 @@ ScrewFast is an **open-source template** designed for quick and efficient web pr
   * Highlights the relevant section in the ToC with a scroll progress indicator. 
   * Developers seeking alternatives might consider the [remark-toc](https://github.com/remarkjs/remark-toc) plugin.
 
-> [!NOTE]
-> Currently, there are no planned improvements or known bugs. If you encounter any issues, please report them on our [issues page](https://github.com/mearashadowfax/ScrewFast/issues) or [start a discussion](https://github.com/mearashadowfax/ScrewFast/discussions/new/choose) to share ideas, suggestions, or ask questions.
   
 ## Getting Started
 
 This guide will provide you with the necessary steps to set up and familiarize yourself with the Astro project on your local development machine.
-
-### Use This Template
-To get started, click the `Use this template` button (the big green one at the top right) to create your own repo from this template in your GitHub account.
-
-### Clone the Repository
-Once your repository is created, you can clone it to your local machine using the following commands:
-
-```bash
-git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPO_NAME].git
-cd [YOUR_REPO_NAME]
-```
 
 ### Installation
 
@@ -220,8 +142,6 @@ public/
 ```
 
 ## Customization
-
-ScrewFast allows for easy customization to suit your specific needs. Here are a couple of ways you can configure components and content:
 
 ### Editing Component Variables
 
@@ -339,14 +259,10 @@ We have two options for the navigation bar components: `Navbar.astro` for a regu
 
 The `Navbar.astro` and `NavbarMegaMenu.astro` components can be configured within `MainLayout.astro`, allowing you to choose the style of navigation that best suits your project. To customize these components, you can modify them directly under `src/components/sections/navbar&footer` to apply specific configurations or design updates.
 
-![ScrewFast MegaMenu](https://github.com/user-attachments/assets/690482af-f1a4-4ebf-be58-eca0b5862973)
-
 
 ## Integrations and Enhancements
 
 ### Starlight Documentation
-
-ScrewFast is now equipped with Starlight, designed to elevate the user experience with documentation. This modern and elegant theme includes a suite of features to make content more accessible and enjoyable to navigate.
 
 Key Features:
 
@@ -638,61 +554,4 @@ To ensure consistent code formatting, particularly for class sorting, we have in
 }
 ```
 
-### Deployment and Security
-
-We deploy our project on [Vercel](https://vercel.com), capitalizing on their robust platform for seamless CI/CD workflows. Using `vercel.json`, we set stringent security headers and caching policies, ensuring adherence to security and performance best practices:
-
-```json
-{
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; [other-directives]"
-        },
-        "Additional security headers..."
-      ]
-    }
-  ]
-}
-```
-
-### HTML Minification
-
-For optimal site performance, we post-process our HTML files with `process-html.mjs`, a [custom script](https://straffesites.com/en/blog/optimize-astro-html-post-build) that minifies HTML after the build phase to reduce file size and improve load times.
-
-Here is a snippet from our HTML minification script in `process-html.mjs`:
-
-```mjs
-/process-html.mjs
-// Post-build HTML minification script snippet
-// ...
-await Promise.all(
-  files.map(async (file) => {
-    // File processing and minification logic
-  })
-);
-```
-
-We encourage you to refer to the detailed documentation for each tool to fully understand their capabilities and how they contribute to the project:
-
-* [Preline UI Documentation](https://preline.co/docs)
-* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-* [Vercel Documentation](https://vercel.com/docs)
-* [html-minifier-terser Documentation](https://github.com/terser/html-minifier-terser)
-
-## Contributing
-
-If you're interested in helping, you can contribute in several ways:
-
-1. Reporting Issues: Feel free to use the issue tracker to report bugs or request features.
-2. Submitting Pull Requests: If you've fixed a bug or added a new feature, submit a pull request with a clear description of your changes.
-3. Providing Feedback: Share your thoughts on the project's current features and suggest improvements.
-
-## License
-
-This project is released under the MIT License. Please read the [LICENSE](https://github.com/mearashadowfax/ScrewFast/blob/main/LICENSE) file for more details.
-
-**Note:** This website template has no affiliation with the companies displayed. Logos are used for demonstration purposes only and should be replaced in customized versions.
+Developed and Maintained By [Think Unlimited](https://thinkunlimited.in).
