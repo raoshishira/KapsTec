@@ -1,13 +1,13 @@
 ---
-title: "SF-TB T845"
-description: "Machine Screws"
+title: "Oil Seals"
+description: "High-Performance Oil Seals for Industrial, Automotive, and Marine Applications"
 main:
   id: 1
   content: |
-    Introducing the SF-TB T845 – your go-to solution for precision fastening in machinery and equipment. This comprehensive set of machine screws is meticulously crafted to meet the stringent demands of industrial applications, ensuring secure and reliable fastening.
+    Prevent costly leaks and protect your machinery with our durable oil seals. We offer a comprehensive range of high-performance rotary shaft seals, also known as lip seals, designed to keep lubricants in and contaminants out. Find the perfect sealing solution for your engines, gearboxes, pumps, and other critical equipment.
   imgCard: "@/images/product-image-1.avif"
   imgMain: "@/images/product-image-main-1.avif"
-  imgAlt: "Mockup boxes of machine screws set"
+  imgAlt: "Various types of industrial oil seals on display"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -19,37 +19,38 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Blueprints"
 longDescription:
-  title: "Precision Fastening Solutions"
+  title: "Precision Sealing Solutions"
   subTitle: |
-    The SF-TB T845 Machine Screws offer unparalleled precision and reliability for industrial applications, ensuring seamless operation and longevity for your machinery and equipment.
+    Our oil seals offer unparalleled precision and reliability for a wide range of applications, from heavy-duty industrial machinery to precision automotive components. They ensure seamless operation and longevity for your equipment by providing a superior sealing barrier against leaks and contaminants.
   btnTitle: "Contact sales to learn more"
   btnURL: "#"
 descriptionList:
   - title: "Durability"
-    subTitle: "Crafted from high-quality materials, these machine screws are built to withstand the rigors of industrial environments."
-  - title: "Precision Engineering"
-    subTitle: "Engineered with precision-cut threads and exact specifications, ensuring a tight and secure fit for every application."
+    subTitle: "Crafted from high-quality materials like NBR, Viton®, and silicone, our seals are built to withstand the rigors of demanding environments."
+  - title: "Contamination Control"
+    subTitle: "Engineered with precision-cut lips and garter springs to prevent the ingress of dust, dirt, and moisture, protecting your internal components."
   - title: "Versatility"
-    subTitle: "Suitable for a wide range of machinery and equipment, providing versatile fastening solutions for various industrial needs."
+    subTitle: "Suitable for a wide range of fluids and temperatures, providing versatile sealing solutions for various industrial, automotive, and marine needs."
 specificationsLeft:
   - title: "Material Composition"
-    subTitle: "Constructed from premium-grade steel or alloy for exceptional strength and durability."
-  - title: "Surface Finish"
-    subTitle: "Finished with a protective coating to enhance corrosion resistance and extend service life."
-  - title: "Quantity Per Set"
-    subTitle: "Each set contains a comprehensive assortment of machine screws to meet diverse industrial requirements."
-  - title: "Size Range"
-    subTitle: "Available in various sizes and lengths to accommodate different machinery and equipment specifications."
+    subTitle: "Available in NBR, Viton®, Silicone, Polyacrylate, and PTFE to suit specific temperature ranges and chemical exposures."
+  - title: "Seal Type"
+    subTitle: "Choose from standard single-lip (SC) and double-lip (TC) seals, as well as specialized cassette seals for more demanding applications."
+  - title: "Construction"
+    subTitle: "Seals feature a robust metal case for structural integrity and a garter spring for consistent radial pressure on the shaft."
+  - title: "Performance"
+    subTitle: "Engineered for optimal performance at high rotational speeds, with some types featuring hydrodynamic aids to assist with sealing."
 specificationsRight:
-  - title: "Thread Specifications"
-    subTitle: "Precision-engineered threads ensure optimal grip and reliability, even in high-vibration environments."
-  - title: "Load Capacity"
-    subTitle: "Designed to meet or exceed industry standards for load-bearing capacity, ensuring safe and reliable operation."
-  - title: "Certifications"
-    subTitle: "Compliant with relevant industry standards and certifications, guaranteeing quality and reliability."
-  - title: "Applications"
-    subTitle: "Ideal for use in a wide range of industrial machinery, equipment, and assemblies that demand precise and secure fastening."
+  - title: "Dimensions"
+    subTitle: "Offered in a comprehensive range of shaft diameter, outer diameter, and width specifications to ensure a perfect fit."
+  - title: "Temperature Range"
+    subTitle: "Each material provides a specific temperature range, with options for low-temp, high-temp, and broad-range applications."
+  - title: "Compatibility"
+    subTitle: "Materials are selected based on their resistance to various fluids, including petroleum-based oils, water, and specialized chemicals."
+  - title: "Compliance"
+    subTitle: "Our standard shaft seals conform to relevant industry standards, including ISO 6194 and DIN 3760."
 blueprints:
   first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"   
+  second: "@/images/blueprint-2.avif"
+
 ---

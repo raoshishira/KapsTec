@@ -1,29 +1,29 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Everything you need to know about our products, services, and process.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What industries do you serve?",
+      "answer": "We provide sealing solutions for a wide range of industries, including steel, cement, automotive, and pharmaceutical manufacturing."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "Do you offer custom seal designs?",
+      "answer": "Yes, our engineering team specializes in developing custom seals tailored to your specific equipment and operating conditions."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "How long does it take to deliver an order?",
+      "answer": "Delivery times vary depending on the complexity and quantity of your order. Standard products are often shipped within 7–10 business days, while custom orders may take longer."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "What materials do you use for your seals?",
+      "answer": "We use a variety of high-performance materials, such as PTFE, EPDM, silicone, and nitrile, selected based on the application’s temperature, pressure, and chemical exposure requirements."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "Do you offer installation support?",
+      "answer": "Yes, we provide technical guidance and, where needed, on-site assistance to ensure correct installation and optimal performance."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Can your seals handle extreme conditions?",
+      "answer": "Absolutely. Our seals are designed to withstand high pressures, extreme temperatures, and harsh chemical environments."
     }
   ]
 }

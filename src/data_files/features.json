@@ -1,22 +1,32 @@
 [
   {
-    "heading": "Dedicated Teams",
-    "content": "Benefit from our committed teams who ensure your success is personal. Count on expert guidance and exceptional results throughout your project journey.",
-    "svg": "groups"
+    "heading": "Proven Industry Experience",
+    "content": "With a team backed by over 15 years of industrial application expertise, we bring deep technical knowledge to every sealing challenge.",
+    "svg": "tools"
   },
   {
-    "heading": "Simplicity and Affordability",
-    "content": "Find easy-to-use, affordable solutions with ScrewFast's line of tools and equipment. Our products make procurement simple and keep projects within budget.",
-    "svg": "verified"
+    "heading": "Precision in Every Seal",
+    "content": "Every product is manufactured with meticulous attention to detail, ensuring dimensional accuracy and consistent performance.",
+    "svg": "sparks"
   },
   {
-    "heading": "Comprehensive Documentation",
-    "content": "Integrate with ease using ScrewFast's exhaustive guides and libraries. Achieve seamless product adoption with our full suite of documentation designed for your success.",
-    "svg": "books"
+    "heading": "Specialized Hydraulic Solutions",
+    "content": "We focus on high-performance hydraulic seals tailored for power, steel, and OEM applications, addressing unique operational demands.",
+    "svg": "rocket"
   },
   {
-    "heading": "User-Centric Design",
-    "content": "Experience the difference with ScrewFast's user-focused design — where functionality meets practicality for an enhanced work experience.",
-    "svg": "frame"
+    "heading": "Performance-Driven Design",
+    "content": "Our designs are engineered to enhance equipment efficiency, reduce downtime, and extend service life.",
+    "svg": "hammer"
+  },
+  {
+    "heading": "Material & Application Expertise",
+    "content": "A thorough understanding of sealing materials, lubrication interactions, and reciprocating & rotary applications ensures optimal results.",
+    "svg": "puzzle"
+  },
+  {
+    "heading": "Trusted by Leading Industries",
+    "content": "From government projects to corporate clients, our solutions are trusted across India and are expanding into global markets.",
+    "svg": "dashboard"
   }
 ]

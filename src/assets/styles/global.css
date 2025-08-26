@@ -119,3 +119,19 @@
     cursor: pointer;
   }
 }
+@layer base {
+  :root {
+    --color-bg: white;
+    --color-text: black;
+  }
+
+  .dark {
+    --color-bg: #0f172a; /* slate-900 */
+    --color-text: #f1f5f9; /* slate-100 */
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+}

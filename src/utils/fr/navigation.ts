@@ -16,13 +16,14 @@ const footerLinks = [
       { name: "Services de Construction", url: "/fr/services" },
     ],
   },
-  {
+    {
     section: "Société",
     links: [
       { name: "À propos de nous", url: "#" },
       { name: "Blog", url: "/fr/blog" },
       { name: "Carrières", url: "#" },
       { name: "Clients", url: "#" },
+      { name: "Contact", url: "/fr/contact" },
     ],
   },
 ];

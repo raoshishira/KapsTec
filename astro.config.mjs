@@ -84,11 +84,7 @@ export default defineConfig({
         },
       ],
       social: [
-        {
-          icon: "github",
-          label: "GitHub",
-          href: "https://github.com/mearashadowfax/ScrewFast",
-        },
+
       ],
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],

@@ -1,28 +1,30 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
+  { name: "About", url: "#" },
+  { name: "Products", url: "#" },
   { name: "Contact", url: "/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Sitemap",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Home", url: "/" },
+      { name: "About", url: "#" },
+      { name: "Products", url: "#" },
+      { name: "Contact", url: "/contact" },
     ],
   },
   {
-    section: "Company",
+    section: "Our Products",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
+      { name: "Oil Seal", url: "#" },
+      { name: "Static seal", url: "#" },
+      { name: "Rubber Diaphragm", url: "#" },
+      { name: "Valve seal", url: "#" },
+      { name: "TC Sanitary Gaskets", url: "#" },
+      { name: "FBC Gaskets", url: "#" },
     ],
   },
 ];
