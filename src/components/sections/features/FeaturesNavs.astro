@@ -25,9 +25,9 @@ interface Props {
 ---
 
 <section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="mx-auto max-w-[85rem] px-2 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <div class="relative p-6 md:p-16">
+  <div class="relative p-2 md:p-16">
     <div
       class="relative z-10 flex h-[75vh] flex-col lg:grid lg:h-auto lg:grid-cols-12 lg:items-center lg:gap-16"
     >
@@ -40,7 +40,7 @@ interface Props {
           <Fragment set:html={title} />
         </h2>
         <!-- Tab navigation - use the attribute 'first' in the first TabNav for the component to work -->
-        <nav class="mt-5 grid gap-4 overflow-y-auto md:mt-10" aria-label="Tabs" role="tablist">
+        <nav class="mt-5 grid grid-cols-2 gap-4 overflow-y-auto md:mt-10" aria-label="Tabs" role="tablist">
           {
             tabs.map((tab, index) => (
               <TabNav
@@ -50,7 +50,9 @@ interface Props {
                 heading={tab.heading}
                 first={tab.first}
               >
+                <span class="hide-on-mobile">
                 <Icon name={tab.svg} />
+              </span>
               </TabNav>
             ))
           }
