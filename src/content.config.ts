@@ -15,32 +15,32 @@ const productsCollection = defineCollection({
       imgCard: image(),
       imgMain: image(),
       imgAlt: z.string(),
-    }),
+    }).optional(),
     tabs: z.array(
       z.object({
         id: z.string(),
         dataTab: z.string(),
         title: z.string(),
       })
-    ),
+    ).optional(),
     longDescription: z.object({
       title: z.string(),
       subTitle: z.string(),
       btnTitle: z.string(),
       btnURL: z.string(),
-    }),
+    }).optional(),
     descriptionList: z.array(
       z.object({
         title: z.string(),
         subTitle: z.string(),
       })
-    ),
+    ).optional(),
     specificationsLeft: z.array(
       z.object({
         title: z.string(),
         subTitle: z.string(),
       })
-    ),
+    ).optional(),
     specificationsRight: z.array(
       z.object({
         title: z.string(),
@@ -56,7 +56,7 @@ const productsCollection = defineCollection({
     blueprints: z.object({
       first: image().optional(),
       second: image().optional(),
-    }),
+    }).optional(),
   }),
 });
 
