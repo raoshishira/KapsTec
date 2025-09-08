@@ -39,7 +39,7 @@ const images = [
 ---
 
 <!-- Defining a relative container to hold the slideshow and the content -->
-<section class="relative h-screen min-h-[600px] flex items-center justify-center text-white -mx-4 sm:-mx-6 lg:-mx-8">
+<section class="relative h-screen lg:h-[65vh] min-h-[600px] flex items-center lg:items-end justify-center lg:justify-start text-white -mx-4 sm:-mx-6 lg:-mx-8">
   <!-- Slideshow container -->
   <div class="slideshow">
     {images.map((image) => (
@@ -58,7 +58,7 @@ const images = [
   <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
   <!-- Content container -->
-  <div class="relative z-10 mx-auto max-w-3xl text-center p-4">
+  <div class="relative z-10 max-w-3xl text-center lg:text-left p-4 lg:pb-16 lg:pl-16 lg:mx-0">
     <!-- Title and description -->
     <div>
       <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
@@ -76,7 +76,7 @@ const images = [
       </p>
     }
       <!-- Action Button Section: This section includes two CTAs with their own styles and URL -->
-      <div class="mt-7 grid w-full gap-3 sm:flex sm:justify-center">
+      <div class="mt-7 grid w-full gap-3 sm:flex sm:justify-center lg:justify-start">
         {primaryBtn && 
         <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
         }

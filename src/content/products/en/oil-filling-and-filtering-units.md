@@ -6,8 +6,8 @@ layout: ../../../layouts/MainLayout.astro
 main:
   id: 5
   content: "Maintaining lubricant cleanliness is critical for the health of hydraulic and lubrication systems. KapsTec's oil filling and filtering units provide a complete solution for transferring, filtering, and conditioning oils. These units remove harmful contaminants like particles and water, preventing premature wear on components, reducing system downtime, and extending the life of both the lubricant and the machinery itself."
-  imgCard: "@images/product-image-main-3.avif"
-  imgMain: "@images/product-image-main-4.avif"
+  imgCard: "@images/oil_filling.jpg"
+  imgMain: "@images/oil_filling.jpg"
   imgAlt: "A mobile oil filling and filtration unit."
 
 tabs:

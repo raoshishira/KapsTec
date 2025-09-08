@@ -6,8 +6,8 @@ layout: ../../../layouts/MainLayout.astro
 main:
   id: 1
   content: "KapsTec offers a premier selection of rubber seals designed to meet the rigorous demands of modern industry. From preventing leaks in high-pressure systems to protecting components from environmental contaminants, our seals provide a robust and reliable solution. We utilize advanced materials and manufacturing processes to ensure every seal delivers exceptional performance and longevity."
-  imgCard: "@images/product-image-1.avif"
-  imgMain: "@images/product-image-main-1.avif"
+  imgCard: "@images/rubber_seals.webp"
+  imgMain: "@images/rubber_seals.webp"
   imgAlt: "A selection of high-quality industrial rubber seals."
 
 tabs:

@@ -6,8 +6,8 @@ layout: ../../../layouts/MainLayout.astro
 main:
   id: 3
   content: "KapsTec's gear couplings are engineered to transmit high levels of torque between rotating shafts where misalignment may occur. These robust couplings are essential for connecting motors, gearboxes, and machinery in demanding environments like steel mills and power plants. The crowned gear teeth design allows for both angular and parallel misalignment, reducing stress on connected equipment and extending operational life."
-  imgCard: "@images/product-image-3.avif"
-  imgMain: "@images/product-image-main-3.avif"
+  imgCard: "@images/gear_couplings.jpg"
+  imgMain: "@images/gear_couplings.jpg"
   imgAlt: "A heavy-duty industrial gear coupling."
 
 tabs:

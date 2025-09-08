@@ -6,8 +6,8 @@ layout: ../../../layouts/MainLayout.astro
 main:
   id: 2
   content: "KapsTec manufactures a wide array of industrial rolls engineered to withstand the demanding conditions of heavy industry. Our rolls are crucial for processes like conveying, processing, and finishing. We use high-strength steel alloys and advanced coating technologies to ensure our rolls offer superior wear resistance, high load-bearing capacity, and extended service life, minimizing downtime and maximizing productivity."
-  imgCard: "@images/product-image-2.avif"
-  imgMain: "@images/product-image-main-2.avif"
+  imgCard: "@images/rolls.webp"
+  imgMain: "@images/rolls.webp"
   imgAlt: "A large, precision-engineered industrial steel roll."
 
 tabs:

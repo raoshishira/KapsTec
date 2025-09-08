@@ -6,8 +6,8 @@ layout: ../../../layouts/MainLayout.astro
 main:
   id: 4
   content: "KapsTec's Quick Release Couplings (QRC) are designed for efficiency and safety, allowing for swift connection and disconnection of fluid or air lines without the need for tools. These couplings provide a secure, leak-proof seal, which is critical in high-pressure hydraulic and pneumatic systems. Their robust construction ensures reliable performance in demanding industrial environments, reducing downtime during equipment changeovers or maintenance."
-  imgCard: "@images/product-image-4.avif"
-  imgMain: "@images/product-image-main-4.avif"
+  imgCard: "@images/qrc.jpg"
+  imgMain: "@images/qrc.jpg"
   imgAlt: "A set of brass and steel quick release couplings."
 
 tabs:

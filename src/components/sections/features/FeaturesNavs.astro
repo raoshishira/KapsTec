@@ -17,7 +17,7 @@ interface Props {
 const { title, products } = Astro.props;
 ---
 
-<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 bg-white">
   {title && (
     <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
       <h2
@@ -32,7 +32,7 @@ const { title, products } = Astro.props;
       {products.map((product) => (
         <a
           href={product.url}
-          class="group/tabButton bg-white w-full h-full nav-link font-bold transition duration-500 lg:border-2 border-[color:#e5e7eb] rounded-lg max-lg:aria-selected:bg-blue max-lg:aria-selected:shadow-[0px_5px_4px_0px_rgba(0,0,0,0.14)]"
+          class="group/tabButton bg-white w-full h-full nav-link font-bold transition duration-500 lg:border-2 border-[color:#e5e7eb] rounded-lg shadow-md max-lg:aria-selected:bg-blue max-lg:aria-selected:shadow-[0px_5px_4px_0px_rgba(0,0,0,0.14)]"
         >
           <span class="group/tabContent flex flex-col items-center justify-between h-full">
             <span class="relative flex lg:flex-none items-center justify-center w-full bg-cover rounded-full overflow-hidden">
@@ -65,13 +65,15 @@ const { title, products } = Astro.props;
                     ></path>
                   </g>
                 </svg>
-                <Image
-                  src={product.image}
-                  alt={product.alt}
-                  width="250"
-                  height="250"
-                  class="rounded-full"
-                />
+                <div class="w-[250px] h-[250px] rounded-full overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.alt}
+                    width="250"
+                    height="250"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </span>
             <span class="text-center lg:flex-grow lg:flex lg:items-center text-primary font-semibold text-sm md:text-[22px] px-6 pb-5 mt-3">
