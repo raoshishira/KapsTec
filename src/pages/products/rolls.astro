@@ -1,0 +1,68 @@
+---
+import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
+import rolls from "@/images/rolls.webp";
+import productImage1 from "@/images/product-image-1.avif";
+import productImage2 from "@/images/product-image-2.avif";
+import productImage3 from "@/images/product-image-3.avif";
+import productImage4 from "@/images/product-image-4.avif";
+import productImageMain1 from "@/images/product-image-main-1.avif";
+import productImageMain2 from "@/images/product-image-main-2.avif";
+
+const product = {
+  title: "Industrial Rolls",
+  description: "High-performance industrial rolls designed for precision, durability, and efficiency in the steel and cement industries.",
+  main: {
+    id: 2,
+    content: "KapsTec manufactures a wide array of industrial rolls engineered to withstand the demanding conditions of heavy industry. Our rolls are crucial for processes like conveying, processing, and finishing. We use high-strength steel alloys and advanced coating technologies to ensure our rolls offer superior wear resistance, high load-bearing capacity, and extended service life, minimizing downtime and maximizing productivity.",
+    imgCard: rolls,
+    imgMain: rolls,
+    imgAlt: "A large, precision-engineered industrial steel roll."
+  },
+  product_sections: [
+    {
+      title: "Rolls for Long Product Mills",
+      features: [
+        "HSS Rolls for Bar Mills",
+        "Alloy Cast Steel Rolls",
+        "Adamite Rolls",
+        "Graphitic Steel Rolls",
+        "Pearlitic Nodular Cast Iron Rolls",
+        "Bainitic Nodular Cast Iron Rolls",
+        "Alloy Indefinite Chilled Cast Iron Rolls",
+        "Cast Rolls with Grooves"
+      ],
+      images: [
+        { src: productImage1, alt: "Rolls for Long Product Mills Image 1" },
+        { src: productImage2, alt: "Rolls for Long Product Mills Image 2" }
+      ]
+    },
+    {
+      title: "Rolls for Hot Strip & Plate Mills",
+      features: [
+        "High Chrome Steel Rolls",
+        "EN-HiCr Iron Rolls",
+        "Enhanced ICDP Rolls",
+        "HSS Rolls",
+        "Cast Back-up Rolls"
+      ],
+      images: [
+        { src: productImage3, alt: "Rolls for Hot Strip & Plate Mills Image 1" },
+        { src: productImage4, alt: "Rolls for Hot Strip & Plate Mills Image 2" }
+      ]
+    },
+    {
+      title: "Rolls for Cold Rolling Mills",
+      features: [
+        "Work Rolls",
+        "Back-up Rolls"
+      ],
+      images: [
+        { src: productImageMain1, alt: "Rolls for Cold Rolling Mills Image 1" },
+        { src: productImageMain2, alt: "Rolls for Cold Rolling Mills Image 2" }
+      ]
+    }
+  ]
+};
+---
+
+<ProductPageLayout product={product} />

@@ -1,0 +1,99 @@
+{
+  "featuresNavs": {
+    "title": "Our Core Values",
+    "products": [
+      {
+        "title": "Innovation",
+        "image": "@/images/innovative-solutions.avif",
+        "alt": "Innovative Solutions",
+        "url": "#"
+      },
+      {
+        "title": "Quality",
+        "image": "@/images/precision-engineering.avif",
+        "alt": "Precision Engineering",
+        "url": "#"
+      },
+      {
+        "title": "Integrity",
+        "image": "@/images/built-to-last.avif",
+        "alt": "Built to Last",
+        "url": "#"
+      }
+    ]
+  },
+  "featureStats": {
+    "title": "Over a Decade of Excellence",
+    "subTitle": "We have been serving our clients with dedication and passion.",
+    "mainStatTitle": "1M+",
+    "mainStatSubTitle": "Units shipped worldwide",
+    "stats": [
+      {
+        "stat": "100%",
+        "description": "Commitment to quality"
+      },
+      {
+        "stat": "24/7",
+        "description": "Customer support"
+      },
+      {
+        "stat": "50+",
+        "description": "Countries served"
+      },
+      {
+        "stat": "ISO 9001",
+        "description": "Certified Quality Management"
+      }
+    ]
+  },
+  "testimonialsAlt": {
+    "title": "What our partners are saying",
+    "testimonials": [
+      {
+        "content": "KapsTec's commitment to quality and innovation has made them an invaluable partner. Their components have significantly improved our product performance and reliability.",
+        "author": "Michael Johnson",
+        "role": "Supply Chain Director, Global Manufacturing Inc.",
+        "avatarSrc": "https://i.pravatar.cc/150?u=a042581f4e29026025e",
+        "avatarAlt": "Michael Johnson"
+      },
+      {
+        "content": "The team at KapsTec is professional, knowledgeable, and always responsive. They consistently deliver high-quality products on time, every time.",
+        "author": "Sarah Williams",
+        "role": "Lead Engineer, Tech Solutions Ltd.",
+        "avatarSrc": "https://i.pravatar.cc/150?u=a042581f4e29026705e",
+        "avatarAlt": "Sarah Williams"
+      },
+      {
+        "content": "We chose KapsTec for their expertise in custom solutions. They worked closely with us to develop a product that perfectly met our unique specifications.",
+        "author": "David Brown",
+        "role": "R&D Manager, Innovate Corp.",
+        "avatarSrc": "https://i.pravatar.cc/150?u=a04258114e29026703e",
+        "avatarAlt": "David Brown"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "faqs": {
+      "subTitle": "Find answers to common questions about our products and services.",
+      "faqs": [
+        {
+          "question": "What industries do you serve?",
+          "answer": "We serve a wide range of industries including automotive, aerospace, pharmaceutical, food and beverage, and industrial manufacturing."
+        },
+        {
+          "question": "Can you provide custom solutions?",
+          "answer": "Yes, we specialize in developing custom-engineered solutions to meet the unique needs of our clients. Contact us to discuss your specific requirements."
+        },
+        {
+          "question": "What is your quality assurance process?",
+          "answer": "We are an ISO 9001 certified company and follow stringent quality control measures at every stage of our manufacturing process to ensure the highest quality standards."
+        },
+        {
+          "question": "Do you ship internationally?",
+          "answer": "Yes, we ship our products to over 50 countries worldwide. We have a dedicated logistics team to ensure timely and secure delivery."
+        }
+      ]
+    }
+  }
+}

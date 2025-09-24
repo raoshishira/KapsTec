@@ -72,3 +72,69 @@ const makeId = (base: any, index: any) => `${base}${index + 1}`;
     </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordionGroup = document.querySelector('.hs-accordion-group');
+    if (!accordionGroup) return;
+
+    accordionGroup.addEventListener('click', (event) => {
+      const clickedToggle = event.target.closest('.custom-accordion-toggle');
+      if (!clickedToggle) return;
+
+      const clickedItem = clickedToggle.closest('.custom-accordion-item');
+      const clickedContent = clickedItem.querySelector('.custom-accordion-content');
+      const clickedIconNotActive = clickedItem.querySelector('.icon-not-active');
+      const clickedIconActive = clickedItem.querySelector('.icon-active');
+
+      const isActive = clickedItem.classList.contains('active');
+
+      // Close all other accordion items in the group
+      accordionGroup.querySelectorAll('.custom-accordion-item').forEach(item => {
+        if (item !== clickedItem) {
+          const content = item.querySelector('.custom-accordion-content');
+          const toggle = item.querySelector('.custom-accordion-toggle');
+          const iconNotActive = item.querySelector('.icon-not-active');
+          const iconActive = item.querySelector('.icon-active');
+
+          if (item.classList.contains('active')) {
+            content.style.height = content.scrollHeight + 'px';
+            setTimeout(() => {
+              content.style.height = '0';
+              content.style.display = 'none';
+            }, 0);
+            item.classList.remove('active');
+            iconNotActive.classList.remove('hidden');
+            iconActive.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      // Toggle the clicked item
+      if (isActive) {
+        // Collapse
+        clickedContent.style.height = clickedContent.scrollHeight + 'px';
+        setTimeout(() => {
+          clickedContent.style.height = '0';
+          clickedContent.style.display = 'none';
+        }, 0);
+        clickedItem.classList.remove('active');
+        clickedIconNotActive.classList.remove('hidden');
+        clickedIconActive.classList.add('hidden');
+        clickedToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        // Expand
+        clickedContent.style.display = 'block';
+        clickedContent.style.height = '0'; // Reset height before expanding
+        setTimeout(() => {
+          clickedContent.style.height = clickedContent.scrollHeight + 'px';
+        }, 0);
+        clickedItem.classList.add('active');
+        clickedIconNotActive.classList.add('hidden');
+        clickedIconActive.classList.remove('hidden');
+        clickedToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>

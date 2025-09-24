@@ -5,18 +5,13 @@ import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import ProductSection from "@components/sections/products/ProductSection.astro";
 import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
 
 import features from "@data/features.json";
 import { partnersData } from "@/data_files/constants";
 
-// Import images for FeaturesNavs
-import productImage1 from "@images/rubber_seals.webp";
-import productImage2 from "@images/rolls.webp";
-import productImage3 from "@images/gear_couplings.jpg";
-import productImage4 from "@images/qrc.jpg";
-import productImageMain1 from "@images/oil_filling.jpg";
+
 ---
 
 <MainLayout>
@@ -36,41 +31,7 @@ import productImageMain1 from "@images/oil_filling.jpg";
     features={features}
   />
 
-  <FeaturesNavs
-    title="<span class='text-orange-500'>Our Products</span>"
-    products={[
-      {
-        title: "Rubber Seals",
-        image: productImage1,
-        alt: "Rubber Seals",
-        url: "/products/rubber-seals",
-      },
-      {
-        title: "Rolls",
-        image: productImage2,
-        alt: "Rolls",
-        url: "/products/rolls",
-      },
-      {
-        title: "Gear coupling",
-        image: productImage3,
-        alt: "Gear coupling",
-        url: "/products/gear-coupling",
-      },
-      {
-        title: "Quick release couplings (QRC)",
-        image: productImage4,
-        alt: "Quick release couplings (QRC)",
-        url: "/products/quick-release-couplings-qrc",
-      },
-      {
-        title: "Oil filling and filtering Units",
-        image: productImageMain1,
-        alt: "Oil filling and filtering Units",
-        url: "/products/oil-filling-and-filtering-units",
-      },
-    ]}
-  />
+  <ProductSection />
 
   <FeaturesStatsAlt
     title="Industries We Serve"

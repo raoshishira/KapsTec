@@ -1,0 +1,65 @@
+---
+import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
+import gearCouplings from "@/images/gear_couplings.jpg";
+import productImage1 from "@/images/product-image-1.avif";
+import productImage2 from "@/images/product-image-2.avif";
+import productImage3 from "@/images/product-image-3.avif";
+import productImage4 from "@/images/product-image-4.avif";
+import productImageMain1 from "@/images/product-image-main-1.avif";
+import productImageMain2 from "@/images/product-image-main-2.avif";
+
+const product = {
+  title: "Gear Couplings",
+  description: "High-torque gear couplings designed for reliable power transmission in heavy industrial machinery.",
+  main: {
+    id: 3,
+    content: "KapsTec's gear couplings are engineered to transmit high levels of torque between rotating shafts where misalignment may occur. These robust couplings are essential for connecting motors, gearboxes, and machinery in demanding environments like steel mills and power plants. The crowned gear teeth design allows for both angular and parallel misalignment, reducing stress on connected equipment and extending operational life.",
+    imgCard: gearCouplings,
+    imgMain: gearCouplings,
+    imgAlt: "A heavy-duty industrial gear coupling."
+  },
+  product_sections: [
+    {
+      title: "Gear Couplings - Type A",
+      features: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Nisi ut aliquip ex ea commodo consequat."
+      ],
+      images: [
+        { src: productImage1, alt: "Gear Coupling Type A Image 1" },
+        { src: productImage2, alt: "Gear Coupling Type A Image 2" }
+      ]
+    },
+    {
+      title: "Gear Couplings - Type B",
+      features: [
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident.",
+        "Sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ],
+      images: [
+        { src: productImage3, alt: "Gear Coupling Type B Image 1" },
+        { src: productImage4, alt: "Gear Coupling Type B Image 2" }
+      ]
+    },
+    {
+      title: "Gear Couplings - Type C",
+      features: [
+        "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
+        "Nullam varius, turpis et commodo pharetra, est eros bibendum elit.",
+        "Eget luctus magna sapien et risus.",
+        "Praesent a nunc eu turpis porta fermentum."
+      ],
+      images: [
+        { src: productImageMain1, alt: "Gear Coupling Type C Image 1" },
+        { src: productImageMain2, alt: "Gear Coupling Type C Image 2" }
+      ]
+    }
+  ]
+};
+---
+
+<ProductPageLayout product={product} />

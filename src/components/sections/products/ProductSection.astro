@@ -1,8 +1,5 @@
 ---
-import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-import FeaturesStatsAlt from "@/components/sections/features/FeaturesStatsAlt.astro";
-import { SITE } from "@data/constants";
 
 // Import images for the products
 import productImage1 from "@images/product-image-1.avif";
@@ -10,7 +7,6 @@ import productImage2 from "@images/product-image-2.avif";
 import productImage3 from "@images/product-image-3.avif";
 import productImage4 from "@images/product-image-4.avif";
 import productImageMain1 from "@images/product-image-main-1.avif";
-
 
 const products = [
   {
@@ -44,22 +40,14 @@ const products = [
     url: "/products/oil-filling-and-filtering-units",
   },
 ];
-
-const pageTitle: string = `Our Products | ${SITE.title}`;
-const metaDescription = "Explore the durability and precision of KapsTec seals, designed for professionals and enthusiasts.";
-const ogTitle = `Our Products | ${SITE.title}`;
 ---
-<MainLayout
-  title={pageTitle}
-  customDescription={metaDescription}
-  customOgTitle={ogTitle}
->
-  <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+
+<div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
     <!-- Title -->
     <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-      <h1 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
+      <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
         Our Products
-      </h1>
+      </h2>
       <p class="mt-1 text-neutral-600 dark:text-neutral-400">
         High-performance sealing solutions for every industrial need.
       </p>
@@ -90,18 +78,3 @@ const ogTitle = `Our Products | ${SITE.title}`;
     </div>
     <!-- End Grid -->
   </div>
-
-  <!-- Industries Section -->
-  <FeaturesStatsAlt
-    title="Industries We Serve"
-    subTitle="From automotive assembly lines to sterile pharmaceutical environments, KapsTec provides reliable sealing solutions that enhance performance and ensure safety across a wide range of critical industries."
-    benefits={[
-      "Automotive & Aerospace",
-      "Pharmaceutical & Medical",
-      "Food & Beverage Processing",
-      "Industrial Manufacturing",
-      "Oil & Gas Exploration",
-      "Power Generation",
-    ]}
-  />
-</MainLayout>

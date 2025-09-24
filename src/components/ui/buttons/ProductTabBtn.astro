@@ -5,7 +5,7 @@ const { id, dataTab, title, first } = Astro.props;
 // Define TypeScript interface for the properties
 interface Props {
   id: string;
-  dataTab: string;
+  dataTab: number; // dataTab will now be a number (1, 2, 3, etc.)
   title: string;
   first?: boolean;
 }
@@ -21,7 +21,7 @@ const INACTIVE_HEADING_CLASS = "text-neutral-800 dark:text-neutral-200";
   type="button"
   class={`${BUTTON_CLASS} ${first ? "active bg-neutral-100 hover:border-transparent dark:bg-white/[.05]" : ""}`}
   id={id}
-  data-target={dataTab}
+  data-target={`#tabs-with-card-${dataTab}`}
   role="tab"
 >
   <!-- Tab text -->

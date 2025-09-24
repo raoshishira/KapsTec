@@ -4,6 +4,7 @@ import Meta from "@components/Meta.astro";
 import Navbar from "@components/sections/navbar&footer/Navbar.astro";
 import FooterSection from "@components/sections/navbar&footer/FooterSection.astro";
 import { SITE } from "@data/constants";
+
 import "@styles/global.css";
 
 // Setting expected props
@@ -27,7 +28,7 @@ interface Props {
 }
 ---
 
-<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
+<html lang={lang}>
   <head>
     {/* Adding metadata to the HTML document */}
     <Meta
@@ -38,6 +39,7 @@ interface Props {
     />
     {/* Define the title of the page */}
     <title>{title}</title>
+    
     <script is:inline>
   // Explicit light mode default unless user sets dark
   const theme = localStorage.getItem("hs_theme");
@@ -51,13 +53,8 @@ interface Props {
   }
 </script>
 
-    <script>
-      import "@scripts/lenisSmoothScroll.js";
-    </script>
   </head>
-  <body
-    class="bg-white selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800 flex flex-col min-h-screen"
-  >
+  <body>
     {/*
     Setting up the main structure of the page.
     The Navbar is placed at the top, with a slot for the main content and FooterSection at the bottom.
@@ -69,20 +66,6 @@ interface Props {
       </main>
     </div>
     <FooterSection />
-    <script>
-      // https://preline.co
-      import "preline/preline.js";
-    </script>
-    <style>
-      /* CSS rules for the page scrollbar */
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
-
-      .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-    </style>
+    
   </body>
 </html>

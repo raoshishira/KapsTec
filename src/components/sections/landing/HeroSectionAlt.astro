@@ -3,7 +3,7 @@
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 
 // Define props from Astro
-const { title, subTitle, url } = Astro.props;
+const { title, subTitle } = Astro.props;
 
 const btnTitle = "Get in Touch with us";
 
@@ -11,12 +11,12 @@ const btnTitle = "Get in Touch with us";
 interface Props {
   title: string;
   subTitle?: string;
-  url?: string;
+  
 }
 ---
 
 <section
-  class="relative mx-auto max-w-[85rem] px-4 pb-24 pt-10 sm:px-6 lg:px-8 bg-white"
+  class="relative mx-auto max-w-[85rem] px-4 pb-24 pt-10 sm:px-6 lg:px-8 dark:bg-slate-900"
 >
   <!-- Decorating SVG elements -->
   <div

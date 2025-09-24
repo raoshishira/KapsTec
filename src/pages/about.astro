@@ -1,16 +1,70 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import aboutData from "@data/about-us-data.json";
+
+// Import images
+import innovativeSolutions from "@/images/innovative-solutions.avif";
+import precisionEngineering from "@/images/precision-engineering.avif";
+import builtToLast from "@/images/built-to-last.avif";
+
+const { featureStats, testimonialsAlt, faq } = aboutData;
+
+// Create a new featuresNavs object with imported images
+const featuresNavs = {
+  title: aboutData.featuresNavs.title,
+  products: [
+    {
+      title: "Innovation",
+      image: innovativeSolutions,
+      alt: "Innovative Solutions",
+      url: "#"
+    },
+    {
+      title: "Quality",
+      image: precisionEngineering,
+      alt: "Precision Engineering",
+      url: "#"
+    },
+    {
+      title: "Integrity",
+      image: builtToLast,
+      alt: "Built to Last",
+      url: "#"
+    }
+  ]
+};
 ---
 
-<MainLayout>
-  <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-    <div class="mx-auto mb-6 w-full space-y-1 text-center sm:w-1/2 lg:w-1/3">
-      <h1 class="text-balance text-3xl font-bold leading-tight text-neutral-800 dark:text-neutral-200 sm:text-4xl">
-        About Us
-      </h1>
-      <p class="text-pretty leading-tight text-neutral-600 dark:text-neutral-400">
-        Learn more about our company.
-      </p>
-    </div>
-  </section>
+<MainLayout title="About Us | KapsTec">
+  <HeroSectionAlt
+    title="Pioneering Industrial Excellence, One Component at a Time"
+    subTitle="At KapsTec, we are dedicated to engineering and delivering high-quality industrial components that our clients can trust. Our journey is one of passion, precision, and an unwavering commitment to excellence."
+    url="#"
+  />
+
+  <FeaturesStats
+    title={featureStats.title}
+    subTitle={featureStats.subTitle}
+    mainStatTitle={featureStats.mainStatTitle}
+    mainStatSubTitle={featureStats.mainStatSubTitle}
+    stats={featureStats.stats}
+  />
+
+  <FeaturesNavs
+    title={featuresNavs.title}
+    products={featuresNavs.products}
+  />
+
+  <TestimonialsSectionAlt
+    title={testimonialsAlt.title}
+    testimonials={testimonialsAlt.testimonials}
+  />
+
+  <FAQ title={faq.title} faqs={faq.faqs} />
+
 </MainLayout>

@@ -1,0 +1,65 @@
+---
+import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
+import oilFilling from "@/images/oil_filling.jpg";
+import productImage1 from "@/images/product-image-1.avif";
+import productImage2 from "@/images/product-image-2.avif";
+import productImage3 from "@/images/product-image-3.avif";
+import productImage4 from "@/images/product-image-4.avif";
+import productImageMain1 from "@/images/product-image-main-1.avif";
+import productImageMain2 from "@/images/product-image-main-2.avif";
+
+const product = {
+  title: "Oil Filling and Filtering Units",
+  description: "Mobile and stationary oil filling and filtering units designed to ensure lubricant cleanliness and extend the life of industrial machinery.",
+  main: {
+    id: 5,
+    content: "Maintaining lubricant cleanliness is critical for the health of hydraulic and lubrication systems. KapsTec's oil filling and filtering units provide a complete solution for transferring, filtering, and conditioning oils. These units remove harmful contaminants like particles and water, preventing premature wear on components, reducing system downtime, and extending the life of both the lubricant and the machinery itself.",
+    imgCard: oilFilling,
+    imgMain: oilFilling,
+    imgAlt: "A mobile oil filling and filtration unit."
+  },
+  product_sections: [
+    {
+      title: "Oil Units - Type A",
+      features: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Nisi ut aliquip ex ea commodo consequat."
+      ],
+      images: [
+        { src: productImage1, alt: "Oil Unit Type A Image 1" },
+        { src: productImage2, alt: "Oil Unit Type A Image 2" }
+      ]
+    },
+    {
+      title: "Oil Units - Type B",
+      features: [
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident.",
+        "Sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ],
+      images: [
+        { src: productImage3, alt: "Oil Unit Type B Image 1" },
+        { src: productImage4, alt: "Oil Unit Type B Image 2" }
+      ]
+    },
+    {
+      title: "Oil Units - Type C",
+      features: [
+        "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
+        "Nullam varius, turpis et commodo pharetra, est eros bibendum elit.",
+        "Eget luctus magna sapien et risus.",
+        "Praesent a nunc eu turpis porta fermentum."
+      ],
+      images: [
+        { src: productImageMain1, alt: "Oil Unit Type C Image 1" },
+        { src: productImageMain2, alt: "Oil Unit Type C Image 2" }
+      ]
+    }
+  ]
+};
+---
+
+<ProductPageLayout product={product} />

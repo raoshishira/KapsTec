@@ -1,0 +1,65 @@
+---
+import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
+import qrc from "@/images/qrc.jpg";
+import productImage1 from "@/images/product-image-1.avif";
+import productImage2 from "@/images/product-image-2.avif";
+import productImage3 from "@/images/product-image-3.avif";
+import productImage4 from "@/images/product-image-4.avif";
+import productImageMain1 from "@/images/product-image-main-1.avif";
+import productImageMain2 from "@/images/product-image-main-2.avif";
+
+const product = {
+  title: "Quick Release Couplings (QRC)",
+  description: "Durable and reliable Quick Release Couplings (QRC) for fast, easy, and secure connections in hydraulic and pneumatic lines.",
+  main: {
+    id: 4,
+    content: "KapsTec's Quick Release Couplings (QRC) are designed for efficiency and safety, allowing for swift connection and disconnection of fluid or air lines without the need for tools. These couplings provide a secure, leak-proof seal, which is critical in high-pressure hydraulic and pneumatic systems. Their robust construction ensures reliable performance in demanding industrial environments, reducing downtime during equipment changeovers or maintenance.",
+    imgCard: qrc,
+    imgMain: qrc,
+    imgAlt: "A set of brass and steel quick release couplings."
+  },
+  product_sections: [
+    {
+      title: "QRC - Type A",
+      features: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        "Nisi ut aliquip ex ea commodo consequat."
+      ],
+      images: [
+        { src: productImage1, alt: "QRC Type A Image 1" },
+        { src: productImage2, alt: "QRC Type A Image 2" }
+      ]
+    },
+    {
+      title: "QRC - Type B",
+      features: [
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident.",
+        "Sunt in culpa qui officia deserunt mollit anim id est laborum."
+      ],
+      images: [
+        { src: productImage3, alt: "QRC Type B Image 1" },
+        { src: productImage4, alt: "QRC Type B Image 2" }
+      ]
+    },
+    {
+      title: "QRC - Type C",
+      features: [
+        "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
+        "Nullam varius, turpis et commodo pharetra, est eros bibendum elit.",
+        "Eget luctus magna sapien et risus.",
+        "Praesent a nunc eu turpis porta fermentum."
+      ],
+      images: [
+        { src: productImageMain1, alt: "QRC Type C Image 1" },
+        { src: productImageMain2, alt: "QRC Type C Image 2" }
+      ]
+    }
+  ]
+};
+---
+
+<ProductPageLayout product={product} />

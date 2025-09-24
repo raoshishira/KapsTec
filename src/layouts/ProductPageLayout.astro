@@ -1,0 +1,154 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import { SITE } from "@data/constants";
+
+// Global declaration for GSAP
+declare global {
+  interface Window {
+    gsap: any;
+  }
+}
+
+interface ProductImage {
+  src: ImageMetadata;
+  alt: string;
+}
+
+interface ProductMain {
+  id: number;
+  content: string;
+  imgCard: ImageMetadata;
+  imgMain: ImageMetadata;
+  imgAlt: string;
+}
+
+interface ProductSection {
+  title: string;
+  features: string[];
+  images: ProductImage[];
+}
+
+interface ProductData {
+  title: string;
+  description: string;
+  main: ProductMain;
+  product_sections?: ProductSection[];
+}
+
+interface Props {
+  product: ProductData;
+}
+
+const { product } = Astro.props as Props;
+
+const pageTitle: string = `${product.title} | ${SITE.title}`;
+const metaDescription = product.description;
+const ogTitle = `${product.title} | Hardware Tools | ScrewFast`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `https://screwfast.uk/products/${product.title.toLowerCase().replace(/\s+/g, "-")}`,
+    name: product.title,
+    description: product.description,
+    brand: {
+      "@type": "Brand",
+      name: "KapsTec",
+    },
+  }}
+>
+  <div id="overlay" class="fixed inset-0 bg-white dark:bg-neutral-800"></div>
+
+  <section class="mx-auto flex max-w-[85rem] flex-col px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:space-x-4">
+      <div class="lg:w-1/2 text-left">
+        <h1 class="mb-4 block text-3xl font-bold tracking-tighter text-neutral-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
+          {product.title}
+        </h1>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400">{product.description}</p>
+        {product.main?.content && (
+          <p
+            id="fadeText"
+            class="mt-4 font-light text-pretty text-neutral-700 text-lg dark:text-neutral-300"
+          >
+            {product.main.content}
+          </p>
+        )}
+      </div>
+      {product.main?.imgMain && (
+        <div class="lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <Image
+            id="fadeInMoveRight"
+            src={product.main.imgMain}
+            class="w-[600px] lg:w-[400px] rounded-lg"
+            alt={product.main.imgAlt}
+            format="avif"
+            loading="eager"
+          />
+        </div>
+      )}
+    </div>
+  </section>
+
+  {product.product_sections && (
+    <div class="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14">
+      {product.product_sections.map((section: ProductSection) => (
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
+          <div class="lg:col-span-1">
+            <h2 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">{section.title}</h2>
+            <ul class="list-disc list-inside space-y-2 text-neutral-600 dark:text-neutral-400">
+              {section.features.map((feature: string) => (
+                <li>{feature}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="lg:col-span-1 grid grid-cols-2 gap-4">
+            {section.images.map((image: ProductImage) => (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="rounded-lg w-full"
+                format="avif"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</MainLayout>
+
+<script>
+  import { gsap } from "gsap";
+
+  function setElementAnimationDefaults(id: string, settings: object) {
+    gsap.set(id, settings);
+  }
+
+  setElementAnimationDefaults("#fadeText", { autoAlpha: 0, y: 50 });
+  setElementAnimationDefaults("#fadeInUp", { autoAlpha: 0, y: 50 });
+  setElementAnimationDefaults("#fadeInMoveRight", { autoAlpha: 0, x: 50 });
+
+  let timeline = gsap.timeline({ defaults: { overwrite: "auto" } });
+
+  timeline.to("#fadeText", { duration: 1.5, autoAlpha: 1, y: 0, delay: 0.5, ease: "power2.out" });
+  timeline.to("#fadeInUp", { duration: 1.5, autoAlpha: 1, y: 0, ease: "power2.out" }, "-=1");
+  timeline.to("#fadeInMoveRight", { duration: 1.5, autoAlpha: 1, x: 0, ease: "power2.inOut" }, "<");
+
+  timeline.to("#overlay", {
+    duration: 1,
+    autoAlpha: 0,
+    onComplete: () => {
+      const overlay = document.getElementById("overlay");
+      if (overlay) overlay.remove();
+      document.body.style.pointerEvents = "auto";
+    },
+  });
+</script>

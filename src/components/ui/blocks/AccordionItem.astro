@@ -10,36 +10,29 @@ interface Props {
   answer: string;
   first?: boolean;
 }
-// Define class names for the accordion and its content
-const ACCORDION_CLASS_DEFAULT = "hs-accordion pb-3 active";
-const ACCORDION_CLASS_COLLAPSED = "hs-accordion pt-6 pb-3";
-const ACCORDION_CONTENT_CLASS =
-  "hs-accordion-content w-full overflow-hidden transition-[height] duration-300";
-// Helper function to return the correct class for the accordion
-function getAccordionClass(first: boolean = false) {
-  return first ? ACCORDION_CLASS_DEFAULT : ACCORDION_CLASS_COLLAPSED;
-}
 ---
 
 <!-- The main container for the accordion item -->
-<div class={getAccordionClass(first)} id={id}>
+<div class="custom-accordion-item" id={id} data-item-id={id} data-item-first={first}>
   <!-- The accordion button, which toggles the expanded/collapsed state -->
   <button
-    class="hs-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 text-balance rounded-lg pb-3 text-start font-bold text-neutral-800 outline-hidden ring-zinc-500 transition hover:text-neutral-500 focus-visible:ring-3 dark:text-neutral-200 dark:ring-zinc-200 dark:hover:text-neutral-400 dark:focus:outline-hidden md:text-lg"
+    class="custom-accordion-toggle group inline-flex w-full items-center justify-between gap-x-3 text-balance rounded-lg pb-3 text-start font-bold text-neutral-800 outline-hidden ring-zinc-500 transition hover:text-neutral-500 focus-visible:ring-3 dark:text-neutral-200 dark:ring-zinc-200 dark:hover:text-neutral-400 dark:focus:outline-hidden md:text-lg"
     aria-controls={collapseId}
+    aria-expanded={first ? "true" : "false"}
   >
     {question}
     <!-- SVG Icon that is shown when the accordion is NOT active -->
-    <Icon name="accordionNotActive" />
+    <Icon name="accordionNotActive" class="icon-not-active" />
 
     <!-- SVG Icon that is shown when the accordion is active -->
-    <Icon name="accordionActive" />
+    <Icon name="accordionActive" class="icon-active hidden" />
   </button>
   <!-- The collapsible content of the accordion -->
   <div
     aria-labelledby={id}
-    class={`${first ? ACCORDION_CONTENT_CLASS : "hidden " + ACCORDION_CONTENT_CLASS}`}
+    class="custom-accordion-content w-full overflow-hidden transition-[height] duration-300"
     id={collapseId}
+    style={first ? "height: auto;" : "height: 0; display: none;"}
   >
     <!-- The content paragraph -->
     <p class="text-pretty text-neutral-600 dark:text-neutral-400">
@@ -47,3 +40,56 @@ function getAccordionClass(first: boolean = false) {
     </p>
   </div>
 </div>
+
+<script is:inline>
+  const item = document.getElementById(this.dataset.itemId);
+  const toggle = item.querySelector('.custom-accordion-toggle');
+  const content = item.querySelector('.custom-accordion-content');
+  const iconNotActive = item.querySelector('.icon-not-active');
+  const iconActive = item.querySelector('.icon-active');
+  const isFirst = this.dataset.itemFirst === 'true';
+
+  // Set initial state based on 'first' prop
+  if (isFirst) {
+    item.classList.add('active');
+    content.style.display = 'block';
+    content.style.height = 'auto';
+    iconNotActive.classList.add('hidden');
+    iconActive.classList.remove('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+  } else {
+    content.style.display = 'none';
+    content.style.height = '0';
+    iconNotActive.classList.remove('hidden');
+    iconActive.classList.add('hidden');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+
+    if (isActive) {
+      // Collapse
+      content.style.height = content.scrollHeight + 'px';
+      setTimeout(() => {
+        content.style.height = '0';
+        content.style.display = 'none';
+      }, 0);
+      item.classList.remove('active');
+      iconNotActive.classList.remove('hidden');
+      iconActive.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      // Expand
+      content.style.display = 'block';
+      content.style.height = '0'; // Reset height before expanding
+      setTimeout(() => {
+        content.style.height = content.scrollHeight + 'px';
+      }, 0);
+      item.classList.add('active');
+      iconNotActive.classList.add('hidden');
+      iconActive.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+  });
+</script>

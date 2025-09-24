@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import lightLogo from "@images/kapstec-logo-dark.png";
 import darkLogo from "@images/kapstec-logo-light.png";
 
-const { class: className } = Astro.props;
+const { class: className, forceLight = false } = Astro.props;
 ---
 
 <a
@@ -14,7 +14,7 @@ const { class: className } = Astro.props;
   <Image
     src={lightLogo}
     alt="Kapstec logo for light mode"
-    class:list={[className, "block dark:hidden"]}
+    class:list={[className, forceLight ? 'block' : 'block dark:hidden']}
     format={"avif"}
     loading={"eager"}
   />
@@ -22,7 +22,7 @@ const { class: className } = Astro.props;
   <Image
     src={darkLogo}
     alt="Kapstec logo for dark mode"
-    class:list={[className, "hidden dark:block"]}
+    class:list={[className, forceLight ? 'hidden' : 'hidden dark:block']}
     format={"avif"}
     loading={"eager"}
   />
