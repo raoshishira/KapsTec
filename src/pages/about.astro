@@ -12,6 +12,19 @@ import innovativeSolutions from "@/images/innovative-solutions.avif";
 import precisionEngineering from "@/images/precision-engineering.avif";
 import builtToLast from "@/images/built-to-last.avif";
 
+interface Stat {
+  stat: string;
+  description: string;
+}
+
+interface FeaturesStatsProps {
+  title: string;
+  subTitle?: string;
+  mainStatTitle: string;
+  mainStatSubTitle: string;
+  stats?: Stat[];
+}
+
 const { featureStats, testimonialsAlt, faq } = aboutData;
 
 // Create a new featuresNavs object with imported images
@@ -44,15 +57,10 @@ const featuresNavs = {
   <HeroSectionAlt
     title="Pioneering Industrial Excellence, One Component at a Time"
     subTitle="At KapsTec, we are dedicated to engineering and delivering high-quality industrial components that our clients can trust. Our journey is one of passion, precision, and an unwavering commitment to excellence."
-    url="#"
   />
 
   <FeaturesStats
-    title={featureStats.title}
-    subTitle={featureStats.subTitle}
-    mainStatTitle={featureStats.mainStatTitle}
-    mainStatSubTitle={featureStats.mainStatSubTitle}
-    stats={featureStats.stats}
+    {...(featureStats as FeaturesStatsProps)}
   />
 
   <FeaturesNavs
