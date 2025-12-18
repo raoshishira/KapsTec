@@ -84,7 +84,11 @@ export default defineConfig({
         },
       ],
       social: [
-
+        {
+          label: "Twitter",
+          href: "https://twitter.com/kapstec",
+          icon: "twitter",
+        },
       ],
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],
