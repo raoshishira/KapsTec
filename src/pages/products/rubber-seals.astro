@@ -1,64 +1,61 @@
 ---
 import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
 import rubberSeals from "@/images/rubber_seals.webp";
-import productImage1 from "@/images/product-image-1.avif";
-import productImage2 from "@/images/product-image-2.avif";
-import productImage3 from "@/images/product-image-3.avif";
-import productImage4 from "@/images/product-image-4.avif";
-import productImageMain1 from "@/images/product-image-main-1.avif";
-import productImageMain2 from "@/images/product-image-main-2.avif";
+import aeroShieldLogo from "@/images/partners/AeroShield.svg";
 
 const product = {
   title: "Rubber Seals",
-  description: "Explore our comprehensive range of high-performance rubber seals, engineered for superior durability and reliability in diverse industrial applications.",
+  description:
+    "Explore our comprehensive range of high-performance rubber seals, engineered for superior durability and reliability in diverse industrial applications.",
   main: {
     id: 1,
-    content: "KapsTec offers a premier selection of rubber seals designed to meet the rigorous demands of modern industry. From preventing leaks in high-pressure systems to protecting components from environmental contaminants, our seals provide a robust and reliable solution. We utilize advanced materials and manufacturing processes to ensure every seal delivers exceptional performance and longevity.",
+    content:
+      "KapsTec offers a premier selection of rubber seals designed to meet the rigorous demands of modern industry. From preventing leaks in high-pressure systems to protecting components from environmental contaminants, our seals provide a robust and reliable solution. We utilize advanced materials and manufacturing processes to ensure every seal delivers exceptional performance and longevity.",
     imgCard: rubberSeals,
-    imgMain: rubberSeals,
-    imgAlt: "A selection of high-quality industrial rubber seals."
+    imgMain: aeroShieldLogo,
+    imgAlt: "A selection of high-quality industrial rubber seals.",
   },
   product_sections: [
     {
-      title: "Rubber Seals - Type A",
+      title: "Rubber Seals - Standard Profiles",
       features: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "Nisi ut aliquip ex ea commodo consequat."
+        "Wide range of standard O-rings and gaskets.",
+        "Available in various elastomers (NBR, Viton, EPDM).",
+        "High resistance to wear and chemicals.",
+        "Cost-effective sealing solutions.",
       ],
       images: [
-        { src: productImage1, alt: "Rubber Seals Type A Image 1" },
-        { src: productImage2, alt: "Rubber Seals Type A Image 2" }
-      ]
+        { src: rubberSeals, alt: "Standard Rubber Seals Image 1" },
+        { src: rubberSeals, alt: "Standard Rubber Seals Image 2" },
+      ],
     },
     {
-      title: "Rubber Seals - Type B",
+      title: "Custom Molded Seals",
       features: [
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-        "Dolore eu fugiat nulla pariatur.",
-        "Excepteur sint occaecat cupidatat non proident.",
-        "Sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Tailor-made designs to fit specific machinery.",
+        "Prototyping and material selection support.",
+        "Precision molding for complex geometries.",
+        "Ideal for specialized industrial applications.",
       ],
       images: [
-        { src: productImage3, alt: "Rubber Seals Type B Image 1" },
-        { src: productImage4, alt: "Rubber Seals Type B Image 2" }
-      ]
+        { src: rubberSeals, alt: "Custom Molded Seals Image 1" },
+        { src: rubberSeals, alt: "Custom Molded Seals Image 2" },
+      ],
     },
     {
-      title: "Rubber Seals - Type C",
+      title: "High-Performance Gaskets",
       features: [
-        "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
-        "Nullam varius, turpis et commodo pharetra, est eros bibendum elit.",
-        "Eget luctus magna sapien et risus.",
-        "Praesent a nunc eu turpis porta fermentum."
+        "Designed for extreme temperatures and pressures.",
+        "Excellent compression set resistance.",
+        "Long service life in demanding environments.",
+        "Reliable sealing for critical flanges.",
       ],
       images: [
-        { src: productImageMain1, alt: "Rubber Seals Type C Image 1" },
-        { src: productImageMain2, alt: "Rubber Seals Type C Image 2" }
-      ]
-    }
-  ]
+        { src: rubberSeals, alt: "High-Performance Gaskets Image 1" },
+        { src: rubberSeals, alt: "High-Performance Gaskets Image 2" },
+      ],
+    },
+  ],
 };
 ---
 

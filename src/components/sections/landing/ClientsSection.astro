@@ -34,32 +34,95 @@ interface Props {
       )
     }
   </div>
-  <div
-    class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
-  >
-    <!-- Clients Group SVGs -->
-    {
-      partners.map((partner) => (
-        <a
-          href={partner.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="transform cursor-pointer rounded-xl bg-white/50 p-4 opacity-70 backdrop-blur-sm transition duration-300 hover:scale-105 hover:opacity-100 dark:bg-neutral-800/50 dark:opacity-80 dark:hover:opacity-100"
-        >
-          {partner.icon.startsWith("http") ? (
-            <img
-              src={partner.icon}
-              alt={partner.name}
-              class="mx-auto h-auto w-32 py-3 grayscale transition duration-500 ease-in-out hover:grayscale-0 sm:mx-0 lg:w-40 lg:py-5"
-            />
-          ) : (
-            <div
-              set:html={partner.icon}
-              class="text-neutral-600 grayscale transition duration-500 ease-in-out hover:grayscale-0 dark:text-neutral-400"
-            />
-          )}
-        </a>
-      ))
-    }
+
+  <!-- Infinite Scrolling Container -->
+  <div class="relative overflow-hidden">
+    <div class="scroll-container flex gap-8 py-4">
+      <!-- First set of logos -->
+      <div class="scroll-content flex items-center gap-8">
+        {
+          partners.map((partner) => (
+            <a
+              href={partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-shrink-0 transform cursor-pointer rounded-xl bg-white/50 p-4 opacity-70 backdrop-blur-sm transition duration-300 hover:scale-105 hover:opacity-100 dark:bg-neutral-800/50 dark:opacity-80 dark:hover:opacity-100"
+            >
+              {typeof partner.icon === "string" &&
+              partner.icon.startsWith("http") ? (
+                <img
+                  src={partner.icon}
+                  alt={partner.name}
+                  class="h-auto w-32 py-3 grayscale transition duration-500 ease-in-out hover:grayscale-0 lg:w-40 lg:py-5"
+                />
+              ) : typeof partner.icon === "string" ? (
+                <div
+                  set:html={partner.icon}
+                  class="text-neutral-600 grayscale transition duration-500 ease-in-out hover:grayscale-0 dark:text-neutral-400"
+                />
+              ) : (
+                <img
+                  src={partner.icon.src}
+                  alt={partner.name}
+                  class="h-auto w-32 py-3 grayscale transition duration-500 ease-in-out hover:grayscale-0 lg:w-40 lg:py-5"
+                />
+              )}
+            </a>
+          ))
+        }
+      </div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="scroll-content flex items-center gap-8" aria-hidden="true">
+        {
+          partners.map((partner) => (
+            <a
+              href={partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-shrink-0 transform cursor-pointer rounded-xl bg-white/50 p-4 opacity-70 backdrop-blur-sm transition duration-300 hover:scale-105 hover:opacity-100 dark:bg-neutral-800/50 dark:opacity-80 dark:hover:opacity-100"
+            >
+              {typeof partner.icon === "string" &&
+              partner.icon.startsWith("http") ? (
+                <img
+                  src={partner.icon}
+                  alt={partner.name}
+                  class="h-auto w-32 py-3 grayscale transition duration-500 ease-in-out hover:grayscale-0 lg:w-40 lg:py-5"
+                />
+              ) : typeof partner.icon === "string" ? (
+                <div
+                  set:html={partner.icon}
+                  class="text-neutral-600 grayscale transition duration-500 ease-in-out hover:grayscale-0 dark:text-neutral-400"
+                />
+              ) : (
+                <img
+                  src={partner.icon.src}
+                  alt={partner.name}
+                  class="h-auto w-32 py-3 grayscale transition duration-500 ease-in-out hover:grayscale-0 lg:w-40 lg:py-5"
+                />
+              )}
+            </a>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .scroll-container {
+    animation: scroll 40s linear infinite;
+  }
+
+  .scroll-container:hover {
+    animation-play-state: paused;
+  }
+</style>

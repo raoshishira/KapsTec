@@ -1,64 +1,60 @@
 ---
 import ProductPageLayout from "@/layouts/ProductPageLayout.astro";
 import qrc from "@/images/qrc.jpg";
-import productImage1 from "@/images/product-image-1.avif";
-import productImage2 from "@/images/product-image-2.avif";
-import productImage3 from "@/images/product-image-3.avif";
-import productImage4 from "@/images/product-image-4.avif";
-import productImageMain1 from "@/images/product-image-main-1.avif";
-import productImageMain2 from "@/images/product-image-main-2.avif";
 
 const product = {
   title: "Quick Release Couplings (QRC)",
-  description: "Durable and reliable Quick Release Couplings (QRC) for fast, easy, and secure connections in hydraulic and pneumatic lines.",
+  description:
+    "Durable and reliable Quick Release Couplings (QRC) for fast, easy, and secure connections in hydraulic and pneumatic lines.",
   main: {
     id: 4,
-    content: "KapsTec's Quick Release Couplings (QRC) are designed for efficiency and safety, allowing for swift connection and disconnection of fluid or air lines without the need for tools. These couplings provide a secure, leak-proof seal, which is critical in high-pressure hydraulic and pneumatic systems. Their robust construction ensures reliable performance in demanding industrial environments, reducing downtime during equipment changeovers or maintenance.",
+    content:
+      "KapsTec's Quick Release Couplings (QRC) are designed for efficiency and safety, allowing for swift connection and disconnection of fluid or air lines without the need for tools. These couplings provide a secure, leak-proof seal, which is critical in high-pressure hydraulic and pneumatic systems. Their robust construction ensures reliable performance in demanding industrial environments, reducing downtime during equipment changeovers or maintenance.",
     imgCard: qrc,
     imgMain: qrc,
-    imgAlt: "A set of brass and steel quick release couplings."
+    imgAlt: "A set of brass and steel quick release couplings.",
   },
   product_sections: [
     {
-      title: "QRC - Type A",
+      title: "Double Shut-Off QRC",
       features: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        "Nisi ut aliquip ex ea commodo consequat."
+        "Valves on both plug and socket ends.",
+        "Prevents fluid loss upon disconnection.",
+        "Ideal for hydraulic systems.",
+        "High pressure and temperature resistance.",
       ],
       images: [
-        { src: productImage1, alt: "QRC Type A Image 1" },
-        { src: productImage2, alt: "QRC Type A Image 2" }
-      ]
+        { src: qrc, alt: "Double Shut-Off QRC Image 1" },
+        { src: qrc, alt: "Double Shut-Off QRC Image 2" },
+      ],
     },
     {
-      title: "QRC - Type B",
+      title: "Single Shut-Off QRC",
       features: [
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
-        "Dolore eu fugiat nulla pariatur.",
-        "Excepteur sint occaecat cupidatat non proident.",
-        "Sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "Valve on the socket end only.",
+        "Suitable for pneumatic tools and air lines.",
+        "High flow rate with minimal pressure drop.",
+        "Easy one-hand operation.",
       ],
       images: [
-        { src: productImage3, alt: "QRC Type B Image 1" },
-        { src: productImage4, alt: "QRC Type B Image 2" }
-      ]
+        { src: qrc, alt: "Single Shut-Off QRC Image 1" },
+        { src: qrc, alt: "Single Shut-Off QRC Image 2" },
+      ],
     },
     {
-      title: "QRC - Type C",
+      title: "Straight-Through QRC",
       features: [
-        "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.",
-        "Nullam varius, turpis et commodo pharetra, est eros bibendum elit.",
-        "Eget luctus magna sapien et risus.",
-        "Praesent a nunc eu turpis porta fermentum."
+        "No valves for maximum flow efficiency.",
+        "Ideal for water and non-hazardous fluids.",
+        "Easy cleaning and maintenance.",
+        "Available in various material options (Brass, SS).",
       ],
       images: [
-        { src: productImageMain1, alt: "QRC Type C Image 1" },
-        { src: productImageMain2, alt: "QRC Type C Image 2" }
-      ]
-    }
-  ]
+        { src: qrc, alt: "Straight-Through QRC Image 1" },
+        { src: qrc, alt: "Straight-Through QRC Image 2" },
+      ],
+    },
+  ],
 };
 ---
 
