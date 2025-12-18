@@ -9,7 +9,13 @@ interface Props {
 ---
 
 <!-- Container for title and subtitle -->
-<div>
-  <p class="text-3xl font-bold text-orange-400 dark:text-orange-300">{title}</p>
-  <p class="mt-1 text-neutral-600 dark:text-neutral-400">{subTitle}</p>
+<div
+  class="rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-shadow duration-300 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
+>
+  <p class="mb-2 text-3xl font-bold text-orange-500 dark:text-orange-400">
+    {title}
+  </p>
+  <p class="text-sm font-medium text-neutral-600 dark:text-neutral-400">
+    {subTitle}
+  </p>
 </div>

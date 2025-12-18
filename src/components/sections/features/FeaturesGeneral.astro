@@ -1,41 +1,129 @@
 ---
-// This component now displays a static "About Us" section.
+// Import image
+import { Image } from "astro:assets";
+import aboutImage from "@images/construction-workers.avif"; // Using a generic professional image for now
+
+// This component displays the "About Us" section with a split layout.
 ---
-<div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 dark:bg-slate-900">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8 text-neutral-800 dark:text-neutral-200">
-      About Us
-    </h2>
-    <div id="about-text-container" class="space-y-4 text-base md:text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed text-pretty">
-      <p>
-        We are KAPSTEC a professionally managed organization with our registered office in Mumbai and a branch office in Bangalore. Established in 2020, we serve as a trusted Representation House, working on behalf of several reputed companies from China and Europe in the Indian market.
-      </p>
-      <div id="more-text" class="hidden lg:block space-y-4">
-        <p>
-          In addition to our representation services, we also proudly manufacture our Rubber Seals for the steel industry under the brand name "AeroShield Seals", which is based in Mumbai.
-        </p>
-        <p>
-          Our primary focus sectors include Steel, Cement and Power. Backed by our dedicated and skilled team of Six Professionals with more than 20 Years of experience, we are committed to delivering quality, reliability and service excellence to our clients across India.
-        </p>
-      </div>
-      <div class="text-center pt-2 lg:hidden">
-                                <button id="read-more-btn" class="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-orange-400 px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 hover:bg-orange-500 active:bg-orange-500 disabled:pointer-events-none disabled:opacity-50 dark:focus:outline-hidden dark:ring-zinc-200 2xl:text-base">
-              Read More
-            </button>
+
+<div
+  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 dark:bg-slate-900"
+>
+  <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+    <div>
+      <Image
+        class="rounded-xl border border-neutral-200 shadow-lg dark:border-neutral-700"
+        src={aboutImage}
+        alt="KapsTec team at work"
+      />
+    </div>
+    <!-- End Col -->
+
+    <div class="mt-5 sm:mt-10 lg:mt-0">
+      <div class="space-y-6 sm:space-y-8">
+        <div class="space-y-2 md:space-y-4">
+          <h2
+            class="text-3xl font-bold text-neutral-800 lg:text-4xl dark:text-neutral-200"
+          >
+            Who We Are
+          </h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-400">
+            We are <span class="font-bold text-orange-600 dark:text-orange-400"
+              >KAPSTEC</span
+            >, a professionally managed organization with our registered office
+            in Mumbai and a branch office in Bangalore. Established in 2020, we
+            serve as a trusted Representation House for reputed global companies
+            in the Indian market.
+          </p>
+          <p class="text-lg text-neutral-600 dark:text-neutral-400">
+            We also proudly manufacture Rubber Seals for the steel industry
+            under the brand name <span
+              class="font-semibold text-neutral-800 dark:text-neutral-200"
+              >"AeroShield Seals"</span
+            > based in Mumbai.
+          </p>
+        </div>
+
+        <ul class="space-y-2 sm:space-y-4">
+          <li class="flex space-x-3">
+            <span
+              class="mt-0.5 flex h-[2rem] w-[2rem] items-center justify-center rounded-full bg-orange-50 text-orange-600 dark:bg-orange-800/30 dark:text-orange-500"
+            >
+              <svg
+                class="h-3.5 w-3.5 flex-shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+
+            <span class="text-neutral-800 dark:text-neutral-200">
+              Focus Sectors: <span class="font-bold"
+                >Steel, Cement, and Power</span
+              >
+            </span>
+          </li>
+
+          <li class="flex space-x-3">
+            <span
+              class="mt-0.5 flex h-[2rem] w-[2rem] items-center justify-center rounded-full bg-orange-50 text-orange-600 dark:bg-orange-800/30 dark:text-orange-500"
+            >
+              <svg
+                class="h-3.5 w-3.5 flex-shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+
+            <span class="text-neutral-800 dark:text-neutral-200">
+              <span class="font-bold">20+ Years</span> of Experience
+            </span>
+          </li>
+
+          <li class="flex space-x-3">
+            <span
+              class="mt-0.5 flex h-[2rem] w-[2rem] items-center justify-center rounded-full bg-orange-50 text-orange-600 dark:bg-orange-800/30 dark:text-orange-500"
+            >
+              <svg
+                class="h-3.5 w-3.5 flex-shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+
+            <span class="text-neutral-800 dark:text-neutral-200">
+              Committed to <span class="font-bold">Quality & Excellence</span>
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
+    <!-- End Col -->
   </div>
-</section>
-
-<script>
-  const readMoreBtn = document.getElementById('read-more-btn');
-  const moreText = document.getElementById('more-text');
-
-  if (readMoreBtn && moreText) {
-    readMoreBtn.addEventListener('click', () => {
-      const isHidden = moreText.classList.contains('hidden');
-      moreText.classList.toggle('hidden');
-      readMoreBtn.textContent = isHidden ? 'Read Less' : 'Read More';
-    });
-  }
-</script>
+</div>

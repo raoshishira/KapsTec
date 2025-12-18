@@ -23,7 +23,7 @@ interface Props {
 >
   <!-- The Image component which renders the image -->
   <Image
-    class="w-full rounded-xl"
+    class="w-full rounded-2xl border border-neutral-200 shadow-xl transition-transform duration-500 hover:scale-[1.02] dark:border-neutral-700"
     src={img}
     alt={imgAlt}
     draggable={"false"}
@@ -33,13 +33,13 @@ interface Props {
   <div class="mt-4 md:mt-0">
     <!-- The title of the section -->
     <h2
-      class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
+      class="mb-4 text-4xl font-extrabold tracking-tight text-balance text-neutral-800 dark:text-neutral-200"
     >
       {title}
     </h2>
     <!-- The subtitle of the section -->
     <p
-      class="mb-4 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-lg"
+      class="mb-4 max-w-prose font-normal text-pretty text-neutral-600 sm:text-lg dark:text-neutral-400"
     >
       {subTitle}
     </p>

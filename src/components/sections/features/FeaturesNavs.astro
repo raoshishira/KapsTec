@@ -17,71 +17,44 @@ interface Props {
 const { title, products } = Astro.props;
 ---
 
-<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 bg-white">
-  {title && (
-    <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-      <h2
-        class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
-        set:html={title}
-      ></h2>
-    </div>
-  )}
+<section
+  class="mx-auto max-w-[85rem] bg-white px-4 py-10 sm:px-6 lg:px-8 lg:py-14"
+>
+  {
+    title && (
+      <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
+        <h2
+          class="text-3xl font-bold text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
+          set:html={title}
+        />
+      </div>
+    )
+  }
 
-  {products && (
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {products.map((product) => (
-        <a
-          href={product.url}
-          class="group/tabButton bg-white w-full h-full nav-link font-bold transition duration-500 lg:border-2 border-[color:#e5e7eb] rounded-lg shadow-md max-lg:aria-selected:bg-blue max-lg:aria-selected:shadow-[0px_5px_4px_0px_rgba(0,0,0,0.14)]"
-        >
-          <span class="group/tabContent flex flex-col items-center justify-between h-full">
-            <span class="relative flex lg:flex-none items-center justify-center w-full bg-cover rounded-full overflow-hidden">
-              <div class="relative inline-flex justify-center items-center px-14 py-3">
-                <svg
-                  class="absolute rounded-full p-6 transition duration-500 text-secondary group-aria-selected/tabButton:text-primary bg-white group-aria-selected/tabButton:bg-secondary group-aria-selected/tabButton:scale-[1.3] w-[5rem] h-[5rem] group-hover/tabContent:bg-secondary group-hover/tabContent:text-black group-hover/tabContent:scale-[1.3]"
-                  width="30"
-                  height="29"
-                  viewBox="0 0 30 29"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g>
-                    <path
-                      class="group-aria-selected/tabButton:hidden"
-                      id="Vector"
-                      d="M15.0742 1.65332V27.4519"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                    <path
-                      id="Vector_2"
-                      d="M2.1748 14.5527H27.9734"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </g>
-                </svg>
-                <div class="w-[250px] h-[250px] rounded-full overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.alt}
-                    width="250"
-                    height="250"
-                    class="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+  {
+    products && (
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => (
+          <a
+            href={product.url}
+            class="group/tabButton nav-link h-full w-full rounded-2xl border-2 border-neutral-100 bg-white font-bold shadow-sm ring-zinc-500 outline-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:ring-3 dark:border-neutral-800"
+          >
+            <span class="group/tabContent flex h-full flex-col items-center justify-between p-4">
+              <span class="relative mb-4 flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl lg:flex-none">
+                <Image
+                  src={product.image}
+                  alt={product.alt}
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover/tabButton:scale-110"
+                />
+                <div class="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover/tabButton:bg-transparent" />
+              </span>
+              <span class="w-full px-2 pb-2 text-center text-lg font-bold text-neutral-800 transition-colors duration-300 group-hover/tabButton:text-orange-600 md:text-xl dark:text-neutral-200">
+                {product.title}
+              </span>
             </span>
-            <span class="text-center lg:flex-grow lg:flex lg:items-center text-primary font-semibold text-sm md:text-[22px] px-6 pb-5 mt-3">
-              {product.title}
-            </span>
-          </span>
-        </a>
-      ))}
-    </div>
-  )}
+          </a>
+        ))}
+      </div>
+    )
+  }
 </section>

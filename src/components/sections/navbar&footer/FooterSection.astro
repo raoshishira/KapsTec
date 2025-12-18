@@ -9,7 +9,6 @@ import { SITE } from "@data/constants";
 
 // Define the variables that will be used in this component
 
-
 const crafted: string = "Crafted by";
 ---
 
@@ -21,22 +20,36 @@ const crafted: string = "Crafted by";
       <div class="col-span-full lg:col-span-2">
         <!-- Brand Logo -->
         <BrandLogo class="h-auto w-32" />
-        <ul class="mt-3 grid space-y-3 text-sm text-neutral-600 dark:text-neutral-400">
+        <ul
+          class="mt-3 grid space-y-3 text-sm text-neutral-600 dark:text-neutral-400"
+        >
           <li>
-            <p>13/A, Surya Orchid, Ramdev Park Road Mira Road (E), Mumbai, Maharashtra - 401107</p>
+            <p>
+              13/A, Surya Orchid, Ramdev Park Road Mira Road (E), Mumbai,
+              Maharashtra - 401107
+            </p>
           </li>
           <li>
-            <a href="tel:+919769330993" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-hidden ring-zinc-500 transition duration-300 hover:text-neutral-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">
+            <a
+              href="tel:+919769330993"
+              class="inline-flex gap-x-2 rounded-lg text-neutral-600 ring-zinc-500 outline-hidden transition duration-300 hover:text-orange-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-orange-400 dark:focus:outline-hidden"
+            >
               Phone: 9769330993
             </a>
           </li>
           <li>
-            <a href="tel:+919103409922" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-hidden ring-zinc-500 transition duration-300 hover:text-neutral-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">
+            <a
+              href="tel:+919103409922"
+              class="inline-flex gap-x-2 rounded-lg text-neutral-600 ring-zinc-500 outline-hidden transition duration-300 hover:text-orange-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-orange-400 dark:focus:outline-hidden"
+            >
               Phone: 9103409922
             </a>
           </li>
           <li>
-            <a href="mailto:support@kapstec.com" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-hidden ring-zinc-500 transition duration-300 hover:text-neutral-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden">
+            <a
+              href="mailto:support@kapstec.com"
+              class="inline-flex gap-x-2 rounded-lg text-neutral-600 ring-zinc-500 outline-hidden transition duration-300 hover:text-orange-500 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-orange-400 dark:focus:outline-hidden"
+            >
               Mail: support@kapstec.com
             </a>
           </li>
@@ -54,12 +67,12 @@ const crafted: string = "Crafted by";
                 <li>
                   <a
                     href={link.url}
-                    class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-hidden ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring-3 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-hidden"
+                    class="inline-flex gap-x-2 rounded-lg text-neutral-600 ring-zinc-500 outline-hidden transition duration-300 hover:text-orange-500 focus-visible:ring-3 dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-orange-400 dark:focus:outline-hidden"
                   >
                     {link.name}
                   </a>
                   {section.section === "Company" && index === 2 ? (
-                    <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
+                    <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-white">
                       We're hiring!
                     </span>
                   ) : null}
@@ -69,8 +82,6 @@ const crafted: string = "Crafted by";
           </div>
         ))
       }
-
-      
     </div>
 
     <div
@@ -78,9 +89,10 @@ const crafted: string = "Crafted by";
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"></span> {SITE.title}. {crafted}
+          © <span id="current-year"></span>
+          {SITE.title}. {crafted}
           <a
-            class="rounded-lg font-medium underline underline-offset-2 outline-hidden ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:hover:text-neutral-300"
+            class="rounded-lg font-medium underline underline-offset-2 ring-zinc-500 outline-hidden transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-hidden focus-visible:ring-3 dark:ring-zinc-200 dark:hover:text-neutral-300"
             href="https://thinkunlimited.in/"
             target="_blank"
             rel="noopener noreferrer">Think Unlimited</a
@@ -98,11 +110,9 @@ const crafted: string = "Crafted by";
           ><Icon name="xFooter" /></FooterSocialLink
         >
 
-
         <FooterSocialLink url={strings.socialLinks.google}
           ><Icon name="googleFooter" />
         </FooterSocialLink>
-
       </div>
     </div>
 

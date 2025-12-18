@@ -39,52 +39,62 @@ const images = [
 ---
 
 <!-- Defining a relative container to hold the slideshow and the content -->
-<section class="relative h-[70vh] lg:h-[60vh] flex items-center lg:items-end justify-center lg:justify-start text-white -mx-4 sm:-mx-6 lg:-mx-8">
+<section
+  class="relative -mx-4 flex h-[70vh] items-center justify-center text-white sm:-mx-6 lg:-mx-8 lg:h-[60vh] lg:items-end lg:justify-start"
+>
   <!-- Slideshow container -->
   <div class="slideshow">
-    {images.map((image) => (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        class="slideshow-image"
-        draggable={"false"}
-        loading={"eager"}
-        format={"avif"}
-      />
-    ))}
+    {
+      images.map((image) => (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          class="slideshow-image"
+          draggable={"false"}
+          loading={"eager"}
+          format={"avif"}
+        />
+      ))
+    }
   </div>
 
   <!-- Overlay for content -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+  <div
+    class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-neutral-900/30"
+  >
+  </div>
 
   <!-- Content container -->
-  <div class="relative z-10 max-w-3xl text-center lg:text-left p-4 lg:pb-16 lg:pl-16 lg:mx-0">
+  <div
+    class="relative z-10 max-w-3xl p-4 text-center lg:mx-0 lg:pb-16 lg:pl-16 lg:text-left"
+  >
     <!-- Title and description -->
     <div>
       <!-- Each h1 and p tag renders a portion of the title and subTitle defined above -->
       <h1
-        class="block text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl lg:leading-tight"
+        class="block text-3xl font-bold tracking-tight text-balance sm:text-4xl lg:text-5xl lg:leading-tight"
       >
         <!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments -->
         <Fragment set:html={title} />
       </h1>
-      {subTitle &&
-      <p
-        class="mt-3 text-pretty text-base leading-relaxed lg:w-full"
-      >
-        {subTitle}
-      </p>
-    }
+      {
+        subTitle && (
+          <p class="mt-3 text-base leading-relaxed text-pretty lg:w-full">
+            {subTitle}
+          </p>
+        )
+      }
       <!-- Action Button Section: This section includes two CTAs with their own styles and URL -->
-      <div class="mt-7 grid w-full gap-3 sm:flex sm:justify-center lg:justify-start">
-        {primaryBtn && 
-        <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
-        }
-        {secondaryBtn && 
-        <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+      <div
+        class="mt-7 grid w-full gap-3 sm:flex sm:justify-center lg:justify-start"
+      >
+        {primaryBtn && <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />}
+        {
+          secondaryBtn && (
+            <SecondaryCTA title={secondaryBtn} url={secondaryBtnURL} />
+          )
         }
       </div>
-
     </div>
   </div>
 </section>
